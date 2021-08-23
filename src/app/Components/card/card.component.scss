@@ -1,0 +1,26 @@
+.card-shadow{
+  box-shadow:  0.1rem .125rem .5rem -0.25rem  #926701;
+}
+.card-text{
+    width: 100% !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+.card{
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+.card:hover{
+    
+    box-shadow:  0.1rem .125rem .75rem 0.25rem  #926701;
+   
+}
+.h-60{
+    height: 60%;
+}
+.h-20{
+    height: 20%;
+
+}

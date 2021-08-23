@@ -6,6 +6,7 @@ import { NavComponent } from './Components/nav/nav.component';
 import { SearchBarComponent } from './Components/search-bar/search-bar.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SortDropdownComponent } from './Components/sort-dropdown/sort-dropdown.component';
+import { CardComponent } from './Components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SortDropdownComponent } from './Components/sort-dropdown/sort-dropdown.
     NavComponent,
     SearchBarComponent,
     HomeComponent,
-    SortDropdownComponent
+    SortDropdownComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule
