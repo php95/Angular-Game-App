@@ -9,6 +9,8 @@ import { SortDropdownComponent } from './Components/sort-dropdown/sort-dropdown.
 import { CardComponent } from './Components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './Pipes/search.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +18,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SearchBarComponent,
     HomeComponent,
     SortDropdownComponent,
-    CardComponent
+    CardComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

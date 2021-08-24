@@ -1,5 +1,10 @@
-<div class="d-flex">
-<input type="search" class="form-control rounded-0 border-radius-left" placeholder="Search" aria-label="Search"
-    aria-describedby="search-addon" />
-  <button type="button" class="btn btn-primary rounded-0 border-radius-right">search</button>
-</div>
+  <form class="d-flex" (ngSubmit)="Search(local)" #local="ngForm">
+    <input type="search" 
+    class="form-control rounded-0 border-radius-left" 
+    placeholder="Search" 
+    aria-label="Search"
+    aria-describedby="search-addon" 
+    ngModel
+    name="Search"/>
+    <button type="button" (click) ="Search(local)"  class="btn btn-primary rounded-0 border-radius-right">search</button>
+  </form>
