@@ -1,38 +1,15 @@
-<div class="row row-cols-1 row-cols-md-4 g-3 ms-2 w-99" >
-    <div class="col">
-      <div class="card h-60 bg-dark card-shadow">
-        <img src="/assets/Images/my photo.jpg" class="card-img-top h-50" alt="...">
+
+<div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-3 ms-2 w-99" *ngIf="loading">
+    <div class="col" *ngFor="let game of games; let i = index">
+      <div class="card card-height bg-dark card-shadow">
+        <img [src]="images[i]" class="card-img-top h-50" alt="...">
         <div class="card-body mt-2 ">
-          <h5 class="card-text mt-5 mb-2 h-20">This is a longer card with supporting text below .</h5>
+          <h5 class="card-text mt-5 mb-2 h-20">{{gameNames[i]}}</h5>
           <img src="https://img.icons8.com/wired/32/000000/phone.png"/>
         </div>
       </div>
-    </div>
-    <div class="col">
-        <div class="card h-60 bg-dark card-shadow">
-          <img src="/assets/Images/my photo.jpg" class="card-img-top h-50" alt="...">
-          <div class="card-body mt-2 ">
-            <h5 class="card-text mt-5 mb-2 h-20">This is a longer card with supporting text below .</h5>
-            <img src="https://img.icons8.com/wired/32/000000/phone.png"/>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-60 bg-dark card-shadow">
-          <img src="/assets/Images/my photo.jpg" class="card-img-top h-50" alt="...">
-          <div class="card-body mt-2 ">
-            <h5 class="card-text mt-5 mb-2 h-20">This is a longer card with supporting text below .</h5>
-            <img src="https://img.icons8.com/wired/32/000000/phone.png"/>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-60 bg-dark card-shadow">
-          <img src="/assets/Images/my photo.jpg" class="card-img-top h-50" alt="...">
-          <div class="card-body mt-2 ">
-            <h5 class="card-text mt-5 mb-2 h-20">This is a longer card with supporting text below .</h5>
-            <img src="https://img.icons8.com/wired/32/000000/phone.png"/>
-          </div>
-        </div>
-      </div>
+    </div>    
+  </div>
+  <div *ngIf="!loading">
+    <ngx-spinner></ngx-spinner>
   </div>
