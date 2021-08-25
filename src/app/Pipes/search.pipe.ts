@@ -12,17 +12,16 @@ export class SearchPipe implements PipeTransform {
       return value;
     }
 
-    const resultArray = [];
+    let resultArray = [];
+    let nameLower;
 
-    for(let item in value)
-    {
-      if(value[item].name === filterString)
-      {
+    resultArray = value.filter((item)=>{
 
-        resultArray.push(value[item]);
-      }
-  
-    }
+      nameLower = item.name.toLowerCase();
+      return nameLower.includes(filterString.toLowerCase());
+
+    })
+
     console.log(resultArray)
    
     return resultArray;

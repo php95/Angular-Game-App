@@ -4,7 +4,8 @@
     placeholder="Search" 
     aria-label="Search"
     aria-describedby="search-addon" 
-    ngModel
-    name="Search"/>
-    <button type="button" (click) ="Search(local)"  class="btn btn-primary rounded-0 border-radius-right">search</button>
+    [(ngModel)] = "searchText"
+    name="Search"
+    (keyup) ="Search(local)"/>
+    <button type="button" class="btn btn-primary rounded-0 border-radius-right">search</button>
   </form>
