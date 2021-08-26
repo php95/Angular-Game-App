@@ -9,9 +9,13 @@ export class SortDropdownComponent implements OnInit {
 
   constructor() { }
 
-  genres:Array<string> = ['Action']
+  genres:Array<string> = ['Name','Released','Metacritic','Added','Updated','Rating']
+  selectedGenre:string = "Name";
 
   ngOnInit(): void {
+  }
+  getValue(e:any){
+     this.selectedGenre= e.target.innerText;
   }
 
 }
