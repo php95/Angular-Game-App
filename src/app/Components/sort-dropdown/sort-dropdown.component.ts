@@ -9,6 +9,8 @@ export class SortDropdownComponent implements OnInit {
 
   constructor() { }
 
+  genres:Array<string> = ['Action']
+
   ngOnInit(): void {
   }
 

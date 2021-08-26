@@ -10,30 +10,22 @@ import { PassDataService } from 'src/app/Services/pass-data.service';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  images: Array<string> = []
-  gamesSize: number = 0;
+ 
   games: Array<Object> = [];
-  gameNames: Array<String> = [];
   loading: boolean = false;
   searchName: any = "";
+  
 
   constructor(private crud: CrudService, private load: LoadingSpinnerService, private spinner: NgxSpinnerService, private pass: PassDataService) { }
 
   ngOnInit(): void {
     this.crud.getData().subscribe((data) => {
       if (data.hasOwnProperty('results')) {
+
         this.games = data.results;
-        this.gamesSize = data.results.length;
-
-        this.games.forEach((item, i) => {
-          this.images[i] = data.results[i].background_image;
-          this.gameNames[i] = data.results[i].name;
-
-          this.loading = this.load.toggle();
-          this.spinner.show();
-
-        })
-        // this.images=data.results.background_image;
+        this.loading = this.load.toggle();
+        this.spinner.show();
+        console.log(this.games);
 
       }
     })

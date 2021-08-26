@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchPipe } from './Pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
+import { SortPipe } from './Pipes/sort.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     SortDropdownComponent,
     CardComponent,
-    SearchPipe
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
